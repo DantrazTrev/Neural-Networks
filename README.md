@@ -7,7 +7,7 @@ The Neural Network uses the Quadratic Cost function and Stochastic gradient desc
 
 #  Running tests
 
-To check that the Neural network is running without any error follow the instructions in test.py
+To check that the Neural network is running without any error run test.py
 
 # New Features to be added
 

@@ -26,7 +26,7 @@ A neural network is a series of algorithms that endeavors to recognize underlyin
 
 Imagine the weight of each string (synapse) connecting a series of tuning pegs (neurons) and an iterative process to achieve proper tuning (training data). In each iteration there is additional fine tuning (back-propagation) to adjust to the desired pitch. Eventually the instrument is tuned and when played (used for prediction) it will harmonize properly (have acceptably low error rates).
 
-[](https://miro.medium.com/max/597/1*CcQPggEbLgej32mVF2lalg.png)
+![The ANN](https://miro.medium.com/max/597/1*CcQPggEbLgej32mVF2lalg.png)
 
 Let’s build a “toy” artificial neural network in software to explore this. The code for our sample is here, we’re using Python . As always we will take a “no black box” approach so we can understand exactly how this machinery works.
 We’re going to provide a very simple training dataset, a series of 3 binary values and an output:

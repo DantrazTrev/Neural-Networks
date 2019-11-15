@@ -26,7 +26,7 @@ A neural network is a series of algorithms that endeavors to recognize underlyin
 
 Imagine the weight of each string (synapse) connecting a series of tuning pegs (neurons) and an iterative process to achieve proper tuning (training data). In each iteration there is additional fine tuning (back-propagation) to adjust to the desired pitch. Eventually the instrument is tuned and when played (used for prediction) it will harmonize properly (have acceptably low error rates).
 
-(https://miro.medium.com/max/597/1*CcQPggEbLgej32mVF2lalg.png)
+[](https://miro.medium.com/max/597/1*CcQPggEbLgej32mVF2lalg.png)
 
 Let’s build a “toy” artificial neural network in software to explore this. The code for our sample is here, we’re using Python . As always we will take a “no black box” approach so we can understand exactly how this machinery works.
 We’re going to provide a very simple training dataset, a series of 3 binary values and an output:
@@ -36,7 +36,7 @@ input [ 1, 0, 1 ] output: 1
 input [ 0, 1, 0] output: 0
 Notice that the output seems tied to the first value, that’s the pattern. We don’t know what the output for [ 1, 1, 0] is, for example, but the pattern of the training data suggests strongly that it’s 1.
  
- To know more you can watch this 3b1b series(https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+ To know more you can watch this [3b1b series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
 
 
  If you want to dive much in detail you can read this [paper](https://papers.nips.cc/paper/59-how-neural-nets-work.pdf)

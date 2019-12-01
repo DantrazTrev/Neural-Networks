@@ -5,6 +5,16 @@ it also includes the famous MNSIT dataset with an data expander using the basic 
 
 The Neural Network uses the Quadratic Cost function and Stochastic gradient descent with no regularization.
 
+
+# Starting to Work on the project
+You should have git installed in your system .
+
+1. Fork the repo then In gitbash or terminal if you use mac or linux type: git clone "url of forked repo"
+2. Start working on the project on the your local machine
+3. When you're done with the changes add and commit the changes 
+4. Push the project on your forked 
+5. Create a pull request to the orignal project
+
 #  Running tests
 
 To check that the Neural network is running without any error run test.py

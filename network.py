@@ -57,6 +57,8 @@ class Network:
 
     def cost_derivative(self, output_activations, y):
         return (output_activations-y)
+    def cost_func(a, y):
+        return np.sum(np.nan_to_num(-y*np.log(a)-(1-y)*np.log(1-a)))
 
 def sigmoid(z):
     return 1.0/(1.0+np.exp(-z))

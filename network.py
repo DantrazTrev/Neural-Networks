@@ -1,6 +1,7 @@
 from backpropogations import backprop
 import random
 import numpy as np
+import costfunctions
 
 class Network:
 
@@ -57,6 +58,24 @@ class Network:
 
     def cost_derivative(self, output_activations, y):
         return (output_activations-y)
+    
+    def save(self, filename):
+         data = {"sizes": self.sizes,
+                "weights": [w.tolist() for w in self.weights],
+                "biases": [b.tolist() for b in self.biases]}
+        f = open(filename, "w")
+        json.dump(data, f)
+        f.close()
+
+def load(filename):
+    f = open(filename, "r")
+    data = json.load(f)
+    f.close()
+    cost = getattr(sys.modules[__name__], data["cost"])
+    net = Network(data["sizes"])
+    net.weights = [np.array(w) for w in data["weights"]]
+    net.biases = [np.array(b) for b in data["biases"]]
+    return net
 
 def sigmoid(z):
     return 1.0/(1.0+np.exp(-z))

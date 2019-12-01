@@ -71,7 +71,6 @@ def load(filename):
     f = open(filename, "r")
     data = json.load(f)
     f.close()
-    cost = getattr(sys.modules[__name__], data["cost"])
     net = Network(data["sizes"])
     net.weights = [np.array(w) for w in data["weights"]]
     net.biases = [np.array(b) for b in data["biases"]]

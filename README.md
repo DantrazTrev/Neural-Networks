@@ -52,4 +52,4 @@ Notice that the output seems tied to the first value, that’s the pattern. We d
  If you want to dive much in detail you can read this [paper](https://papers.nips.cc/paper/59-how-neural-nets-work.pdf)
  
  # For Kwoc contestants
- Hey, I'm Ayush/Dantraz if you like this project and would like to work on it, you've a really great opportunity. To start working on the project as an contestant , join [link](https://join.slack.com/t/thetrevprovers/shared_invite/enQtODM2MjA5ODY4NDg0LTE0Y2FiZmQwMjY0MTBjMTc2MjcwZDE2ZmI0NTZlMWM4Y2JjMjY5YTAyODU4Y2ZmMjhkZmRkZjc5NTQ3MTgzNTI) , you can start of by saying Hi..
+ Hey, I'm Dantraz if you like this project and would like to work on it, you've a really great opportunity. To start working on the project as an contestant , join [link](https://join.slack.com/t/thetrevprovers/shared_invite/enQtODM2MjA5ODY4NDg0LTE0Y2FiZmQwMjY0MTBjMTc2MjcwZDE2ZmI0NTZlMWM4Y2JjMjY5YTAyODU4Y2ZmMjhkZmRkZjc5NTQ3MTgzNTI) , you can start of by saying Hi..

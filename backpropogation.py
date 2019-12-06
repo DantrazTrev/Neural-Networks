@@ -1,7 +1,7 @@
 from network import Network
 #The backpropogation function 
 def backprop(net, x, y):
-              nabla_b = [np.zeros(b.shape) for b in net.biases]
+        nabla_b = [np.zeros(b.shape) for b in net.biases]
         nabla_w = [np.zeros(w.shape) for w in net.weights]
         activation = x
         activations = [x] 

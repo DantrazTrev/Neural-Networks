@@ -76,8 +76,13 @@ def load(filename):
     net.biases = [np.array(b) for b in data["biases"]]
     return net
 
+
 def sigmoid(z):
     return 1.0/(1.0+np.exp(-z))
 
 def sigmoid_prime(z):
     return sigmoid(z)*(1-sigmoid(z))
+
+def cross_entropy(a, y):    
+    return np.sum(np.nan_to_num(-y*np.log(a)-(1-y)*np.log(1-a)))
+

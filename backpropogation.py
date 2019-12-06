@@ -1,4 +1,4 @@
-from network import Network
+from network import Network,sigmoid_prime
 #The backpropogation function 
 def backprop(net, x, y):
         nabla_b = [np.zeros(b.shape) for b in net.biases]

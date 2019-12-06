@@ -15,9 +15,12 @@ You should have git installed in your system .
 4. Push the project on your forked 
 5. Create a pull request to the orignal project
 
+
+
 #  Running tests
 
 To check that the Neural network is running without any error run test.py
+Note: You must have all the basic python libraries installed . Further, the archive handling system needs to be installed on Non Unix and Linux platforms.
 
 # New Features to be added
 

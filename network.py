@@ -58,6 +58,10 @@ class Network:
 
     def cost_derivative(self, output_activations, y):
         return (output_activations-y)
+ 
+    from costfunctions.py import CrossEntropyCost
+    theclass = CrossEntropyCost()
+    return theclass.fn() 
     
     def save(self, filename):
          data = {"sizes": self.sizes,
@@ -76,8 +80,9 @@ def load(filename):
     net.biases = [np.array(b) for b in data["biases"]]
     return net
 
-def sigmoid(z):
-    return 1.0/(1.0+np.exp(-z))
+  
+    def sigmoid(z):
+        return 1.0/(1.0+np.exp(-z))
 
-def sigmoid_prime(z):
-    return sigmoid(z)*(1-sigmoid(z))
+    def sigmoid_prime(z):
+        return sigmoid(z)*(1-sigmoid(z))

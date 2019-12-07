@@ -1,6 +1,7 @@
 from backpropogations import backprop
 import random
 import numpy as np
+import costfunctions
 
 class Network:
 
@@ -42,7 +43,7 @@ class Network:
         nabla_b = [np.zeros(b.shape) for b in self.biases]
         nabla_w = [np.zeros(w.shape) for w in self.weights]
         for x, y in mini_batch:
-            delta_nabla_b, delta_nabla_w,net = backprop(self,x, y)
+            delta_nabla_b, delta_nabla_w,self = backprop(self,x, y)
             nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
             nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
         self.weights = [w-(eta/len(mini_batch))*nw
@@ -57,11 +58,29 @@ class Network:
 
     def cost_derivative(self, output_activations, y):
         return (output_activations-y)
-    
+ 
     from costfunctions.py import CrossEntropyCost
     theclass = CrossEntropyCost()
     return theclass.fn() 
+    
+    def save(self, filename):
+         data = {"sizes": self.sizes,
+                "weights": [w.tolist() for w in self.weights],
+                "biases": [b.tolist() for b in self.biases]}
+        f = open(filename, "w")
+        json.dump(data, f)
+        f.close()
 
+def load(filename):
+    f = open(filename, "r")
+    data = json.load(f)
+    f.close()
+    net = Network(data["sizes"])
+    net.weights = [np.array(w) for w in data["weights"]]
+    net.biases = [np.array(b) for b in data["biases"]]
+    return net
+
+  
     def sigmoid(z):
         return 1.0/(1.0+np.exp(-z))
 

@@ -5,9 +5,22 @@ it also includes the famous MNSIT dataset with an data expander using the basic 
 
 The Neural Network uses the Quadratic Cost function and Stochastic gradient descent with no regularization.
 
+
+# Starting to Work on the project
+You should have git installed in your system .
+
+1. Fork the repo then In gitbash or terminal if you use mac or linux type: git clone "url of forked repo"
+2. Start working on the project on the your local machine
+3. When you're done with the changes add and commit the changes 
+4. Push the project on your forked 
+5. Create a pull request to the orignal project
+
+
+
 #  Running tests
 
 To check that the Neural network is running without any error run test.py
+Note: You must have all the basic python libraries installed . Further, the archive handling system needs to be installed on Non Unix and Linux platforms.
 
 # New Features to be added
 
@@ -42,4 +55,4 @@ Notice that the output seems tied to the first value, that’s the pattern. We d
  If you want to dive much in detail you can read this [paper](https://papers.nips.cc/paper/59-how-neural-nets-work.pdf)
  
  # For Kwoc contestants
- Hey, I'm Ayush/Dantraz if you like this project and would like to work on it, you've a really great opportunity. To start working on the project as an contestant , join [link](https://join.slack.com/t/thetrevprovers/shared_invite/enQtODM2MjA5ODY4NDg0LTE0Y2FiZmQwMjY0MTBjMTc2MjcwZDE2ZmI0NTZlMWM4Y2JjMjY5YTAyODU4Y2ZmMjhkZmRkZjc5NTQ3MTgzNTI) , you can start of by saying Hi..
+ Hey, I'm Dantraz if you like this project and would like to work on it, you've a really great opportunity. To start working on the project as an contestant , join [link](https://join.slack.com/t/thetrevprovers/shared_invite/enQtODM2MjA5ODY4NDg0LTE0Y2FiZmQwMjY0MTBjMTc2MjcwZDE2ZmI0NTZlMWM4Y2JjMjY5YTAyODU4Y2ZmMjhkZmRkZjc5NTQ3MTgzNTI) , you can start of by saying Hi..

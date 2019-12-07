@@ -1,7 +1,8 @@
-from backpropogations import backprop
+from backpropogation import backprop
 import random
 import numpy as np
 import costfunctions
+import json
 
 class Network:
 
@@ -43,9 +44,11 @@ class Network:
         nabla_b = [np.zeros(b.shape) for b in self.biases]
         nabla_w = [np.zeros(w.shape) for w in self.weights]
         for x, y in mini_batch:
-            delta_nabla_b, delta_nabla_w,self = backprop(self,x, y)
-            nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
-            nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
+        	print(type(x),type(y),len(x))
+        	self,delta_nabla_b, delta_nabla_w = backprop(self,x, y)
+        	print(type(delta_nabla_w),type(delta_nabla_b),len(delta_nabla_w),len(delta_nabla_b))
+        	nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
+        	nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
         self.weights = [w-(eta/len(mini_batch))*nw
                         for w, nw in zip(self.weights, nabla_w)]
         self.biases = [b-(eta/len(mini_batch))*nb
@@ -58,14 +61,12 @@ class Network:
 
     def cost_derivative(self, output_activations, y):
         return (output_activations-y)
+
     
     def save(self, filename):
-         data = {"sizes": self.sizes,
-                "weights": [w.tolist() for w in self.weights],
-                "biases": [b.tolist() for b in self.biases]}
-        f = open(filename, "w")
-        json.dump(data, f)
-        f.close()
+         data = {"sizes": self.sizes,"weights": [w.tolist() for w in self.weights],"biases": [b.tolist() for b in self.biases]}
+         with open(filename, "w") as file:
+             json.dump(data, file)
 
 def load(filename):
     f = open(filename, "r")

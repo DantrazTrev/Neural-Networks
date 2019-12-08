@@ -2,7 +2,7 @@ from backpropogation import backprop
 import random
 import numpy as np
 import costfunctions
-
+import json
 class Network:
 
     def __init__(self, sizes):

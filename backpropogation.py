@@ -1,6 +1,13 @@
 from network import Network,sigmoid_prime
 #The backpropogation function 
 def backprop(net, x, y):
+        '''
+        This function performs Back Propogation of a Neural Network. 
+        It takes neural net as OBJECT and training data as List as argument 
+        and returns neural net as OBJECT and derivative of cost wrt to Bias (nabla_b) and weights(nabla_w) as numpy array.
+        Use:
+        `net,nabla_b, nabla_w = backprop(net, x, y)`
+        '''
         nabla_b = [np.zeros(b.shape) for b in net.biases]
         nabla_w = [np.zeros(w.shape) for w in net.weights]
         activation = x

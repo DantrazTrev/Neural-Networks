@@ -14,7 +14,7 @@
 import mnist_loader
 from expnd_dataset.expand_mnist import expand_mnist
 expand_mnist()
-training_data, validation_data, test_data = mnist_loader.load_data_wrapper("mnsit_expanded.pkl.gz")
+training_data, validation_data, test_data = mnist_loader.load_data_wrapper(filename = "mnist_expanded.pkl.gz")
 training_data = list(training_data)
 # ---------------------
 # - network.py example:

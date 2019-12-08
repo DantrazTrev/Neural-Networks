@@ -26,7 +26,7 @@ import random
 
 # Third-party libraries
 import numpy as np
-def expanding_mnist():
+def expand_mnist():
     print("Expanding the MNIST training set")
 
     if os.path.exists("dataset/mnist_expanded.pkl.gz"):

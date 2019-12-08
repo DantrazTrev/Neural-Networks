@@ -1,4 +1,4 @@
-from backpropogations import backprop
+from backpropogation import backprop
 import random
 import numpy as np
 import costfunctions
@@ -43,7 +43,7 @@ class Network:
         nabla_b = [np.zeros(b.shape) for b in self.biases]
         nabla_w = [np.zeros(w.shape) for w in self.weights]
         for x, y in mini_batch:
-            delta_nabla_b, delta_nabla_w,self = backprop(self,x, y)
+            self,delta_nabla_b, delta_nabla_w = backprop(self,x, y)
             nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
             nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
         self.weights = [w-(eta/len(mini_batch))*nw

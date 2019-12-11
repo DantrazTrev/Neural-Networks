@@ -12,13 +12,15 @@
 # ----------------------
 # - read the input data:
 import mnist_loader
-training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
+from expnd_dataset.expand_mnist import expand_mnist
+expand_mnist()
+training_data, validation_data, test_data = mnist_loader.load_data_wrapper(filename = "mnist_expanded.pkl.gz")
 training_data = list(training_data)
 # ---------------------
 # - network.py example:
 import network
 
-save_model = "mnist.json" 
+save_model = "mnist_expanded.json" 
 net = network.Network([784, 30, 10])
 net.SGD(training_data, 30, 10, 3.0, test_data=test_data)
 net.save(save_model)

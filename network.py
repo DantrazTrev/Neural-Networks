@@ -61,7 +61,7 @@ class Network:
  
     from costfunctions.py import CrossEntropyCost
     theclass = CrossEntropyCost()
-    return theclass.fn() 
+        return theclass.fn() 
     
     def save(self, filename):
          data = {"sizes": self.sizes,

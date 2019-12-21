@@ -86,3 +86,26 @@ def load(filename):
 
     def sigmoid_prime(z):
         return sigmoid(z)*(1-sigmoid(z))
+
+def softmax(x):
+    """Calculates the softmax for each row of the input x.
+
+    Argument:
+    x -- A numpy matrix of shape (m,n)
+
+    Returns:
+    s -- A numpy matrix equal to the softmax of x, of shape (m,n)
+    """
+    
+    
+    # Applying exp() element-wise to x.
+    x_exp = np.exp(x)
+
+    # Creating a vector x_sum that sums each row of x_exp.
+    x_sum = np.sum(x_exp, axis = 1, keepdims = True)
+    
+    # Computing softmax(x) by dividing x_exp by x_sum using numpy broadcasting.
+    s = x_exp/x_sum
+
+    
+    return s

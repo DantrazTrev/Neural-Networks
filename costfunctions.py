@@ -44,3 +44,6 @@ def sigmoid(z):
 
 def sigmoid_prime(z):
     return sigmoid(z)*(1-sigmoid(z))
+
+def quadratic_cost(a, y):
+        return 0.5*np.linalg.norm(a-y)**2

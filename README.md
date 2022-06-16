@@ -55,5 +55,5 @@ Notice that the output seems tied to the first value, that’s the pattern. We d
  If you want to dive much in detail you can read this [paper](https://papers.nips.cc/paper/59-how-neural-nets-work.pdf)
  
  # For Contributors
- Hey, I'm Dantraz/Ayush if you like this project and would like to work on it, you've a really great opportunity. To start working on the project if you're a beginner and want to learn about the basic concepts of ML and Data Visualization.
+ Hey, I'm Ayush if you like this project and would like to work on it, you've a really great opportunity. To start working on the project if you're a beginner and want to learn about the basic concepts of ML and Data Visualization.
  Let's go along and build our own personlised library.

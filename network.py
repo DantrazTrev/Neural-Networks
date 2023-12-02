@@ -67,9 +67,9 @@ class Network:
          data = {"sizes": self.sizes,
                 "weights": [w.tolist() for w in self.weights],
                 "biases": [b.tolist() for b in self.biases]}
-        f = open(filename, "w")
-        json.dump(data, f)
-        f.close()
+         f = open(filename, "w")
+         json.dump(data, f)
+         f.close()
 
 def load(filename):
     f = open(filename, "r")
